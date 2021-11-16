@@ -11,7 +11,7 @@ fi
 CHROME_VERSION=$(google-chrome-stable -version | grep -oP "(?<=Google Chrome )\d+\.\d+\.\d+")
 echo ${CHROME_VERSION}
 
-version_list=$(curl -s https://sites.google.com/a/chromium.org/chromedriver/ | grep 'Latest stable' | grep -oP '(?<=ChromeDriver )\d+\.\d+\.\d+\.\d+')
+version_list=$(curl -s https://sites.google.com/a/chromium.org/chromedriver/ | grep 'Latest stable' | grep -oP '(?<=ChromeDriver )\d+\.\d+\.\d+\.\d+'| grep '94')
 for item in ${version_list[@]}; do
     if [[ ${item} =~ ${CHROME_VERSION} ]] ;
     then
