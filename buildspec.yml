@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - yum install python3 python-pip GConf2 unzip -y
+      - yum install ipa-gothic-fonts ipa-mincho-fonts ipa-pgothic-fonts ipa-pmincho-font -y
+      - pip3 install selenium
+      - bash install_chrome.sh
+  build:
+    commands:
+      - python3 get_title.py
