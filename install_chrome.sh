@@ -19,8 +19,10 @@ for item in ${version_list[@]}; do
     fi
 done
 
-CHROMEDRIVER_VERSION="94.0.4606.41"
-curl -O https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
+# https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_linux64.zip
+CHROMEDRIVER_VERSION="96.0.4664.45"
+#curl -O https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
+curl -O https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_linux64.zip
 if [ $? -ne 0 ]; then
     echo "download of chromedriver is failed."
     exit 1
